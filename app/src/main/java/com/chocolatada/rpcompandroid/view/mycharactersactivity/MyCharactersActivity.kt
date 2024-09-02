@@ -1,10 +1,7 @@
-package com.chocolatada.rpcompandroid.view
+package com.chocolatada.rpcompandroid.view.mycharactersactivity
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.chocolatada.rpcompandroid.R
 
 class MyCharactersActivity : AppCompatActivity() {
