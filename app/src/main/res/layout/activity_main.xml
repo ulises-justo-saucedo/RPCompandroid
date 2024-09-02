@@ -8,6 +8,7 @@
     tools:context=".view.MainActivity">
 
     <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,5 +20,14 @@
         android:textAppearance="@color/black"
         android:textStyle="bold"
         android:text="@string/app_name"/>
+
+    <Button
+        android:id="@+id/btnMyCharacters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        android:text="@string/btnMyCharacters"
+        android:textSize="15sp"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

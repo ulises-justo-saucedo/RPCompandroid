@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RPCompandroid</string>
+    <string name="btnMyCharacters">My Characters</string>
 </resources>
