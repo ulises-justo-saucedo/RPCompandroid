@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">RPCompandroid</string>
+
+    <!-- MainActivity -->
     <string name="btnMyCharacters">My Characters</string>
+    <string name="btnCreateCharacter">Create Character</string>
+
+    <!-- CreateCharacterActivity -->
+    <string name="tvTitleCreateCharacter">Fill these fields with your character information! :)</string>
+    <string name="tvNameCreateCharacter">Name</string>
+    <string name="tvSurnameCreateCharacter">Surname</string>
+    <string name="tvAgeCreateCharacter">Age</string>
+    <string name="tvBackstoryCreateCharacter">Backstory</string>
+    <string name="btnCreateCreateCharacter">Create</string>
+    <string name="btnCancelCreateCharacter">Cancel</string>
 </resources>

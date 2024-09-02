@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.CreateCharacterActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/tvTitleCreateCharacter"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textAppearance="@color/black"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:id="@+id/llForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tvNameCreateCharacter"
+            android:textAlignment="center"
+            android:textAppearance="@color/black"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tvSurnameCreateCharacter"
+            android:textAlignment="center"
+            android:textAppearance="@color/black"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/etSurname"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tvAgeCreateCharacter"
+            android:textAlignment="center"
+            android:textAppearance="@color/black"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/etAge"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tvBackstoryCreateCharacter"
+            android:textAlignment="center"
+            android:textAppearance="@color/black"
+            android:textSize="20sp"/>
+        <EditText
+            android:id="@+id/etBackstory"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnCancel"
+        app:layout_constraintTop_toBottomOf="@id/llForm"
+        android:text="@string/btnCreateCreateCharacter"/>
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/btnCreate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llForm"
+        android:text="@string/btnCancelCreateCharacter"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
