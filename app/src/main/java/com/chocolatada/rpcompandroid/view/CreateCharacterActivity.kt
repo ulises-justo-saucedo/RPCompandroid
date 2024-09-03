@@ -1,26 +1,38 @@
 package com.chocolatada.rpcompandroid.view
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.chocolatada.rpcompandroid.R
 import com.chocolatada.rpcompandroid.databinding.ActivityCreateCharacterBinding
+import com.chocolatada.rpcompandroid.model.entity.RPCharacter
+import com.chocolatada.rpcompandroid.model.service.CreateCharacterService
 
 class CreateCharacterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCreateCharacterBinding
+    private lateinit var createCharacterService: CreateCharacterService
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityCreateCharacterBinding.inflate(layoutInflater)
+        initVariables()
         setContentView(binding.root)
         initListeners()
     }
 
+    private fun initVariables(){
+        binding = ActivityCreateCharacterBinding.inflate(layoutInflater)
+        createCharacterService = CreateCharacterService(this, this)
+    }
+
     private fun initListeners(){
         binding.btnCreate.setOnClickListener {
-            TODO("Not yet implemented")
+            val name = binding.etName.text.toString()
+            val surname = binding.etSurname.text.toString()
+            val age = binding.etAge.text.toString().toInt()
+            val backstory = binding.etBackstory.text.toString()
+            val rpCharacter = RPCharacter(0, name, surname, age, backstory)
+            createCharacterService.createCharacter(rpCharacter)
+            finish()
+            Toast.makeText(this, "Character successfully saved!", Toast.LENGTH_SHORT).show()
         }
 
         binding.btnCancel.setOnClickListener {
