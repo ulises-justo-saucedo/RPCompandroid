@@ -7,7 +7,7 @@ import com.chocolatada.rpcompandroid.model.database.RPCompandroidSQLiteHelper
 import com.chocolatada.rpcompandroid.model.entity.RPCharacter
 import com.chocolatada.rpcompandroid.view.CreateCharacterActivity
 
-class CreateCharacterService(private var context: Context, private var createCharacterActivity: CreateCharacterActivity) {
+class RPCharacterService(private var context: Context, private var createCharacterActivity: CreateCharacterActivity) {
     fun createCharacter(rpCharacter: RPCharacter): Long {
         val db = RPCompandroidSQLiteHelper(context).writableDatabase
 
@@ -21,7 +21,7 @@ class CreateCharacterService(private var context: Context, private var createCha
         val id = db.insert(DatabaseContract.RPCharacter.TABLE_NAME, null, data)
 
         db.close()
-        
+
         return id
     }
 }

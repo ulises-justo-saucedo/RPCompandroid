@@ -5,11 +5,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.chocolatada.rpcompandroid.databinding.ActivityCreateCharacterBinding
 import com.chocolatada.rpcompandroid.model.entity.RPCharacter
-import com.chocolatada.rpcompandroid.model.service.CreateCharacterService
+import com.chocolatada.rpcompandroid.model.service.RPCharacterService
 
 class CreateCharacterActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCreateCharacterBinding
-    private lateinit var createCharacterService: CreateCharacterService
+    private lateinit var rpCharacterService: RPCharacterService
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,7 +20,7 @@ class CreateCharacterActivity : AppCompatActivity() {
 
     private fun initVariables(){
         binding = ActivityCreateCharacterBinding.inflate(layoutInflater)
-        createCharacterService = CreateCharacterService(this, this)
+        rpCharacterService = RPCharacterService(this, this)
     }
 
     private fun initListeners(){
@@ -30,7 +30,7 @@ class CreateCharacterActivity : AppCompatActivity() {
             val age = binding.etAge.text.toString().toInt()
             val backstory = binding.etBackstory.text.toString()
             val rpCharacter = RPCharacter(0, name, surname, age, backstory)
-            createCharacterService.createCharacter(rpCharacter)
+            rpCharacterService.createCharacter(rpCharacter)
             finish()
             Toast.makeText(this, "Character successfully saved!", Toast.LENGTH_SHORT).show()
         }
