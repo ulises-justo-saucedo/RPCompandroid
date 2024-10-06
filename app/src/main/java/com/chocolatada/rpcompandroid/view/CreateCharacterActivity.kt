@@ -20,7 +20,7 @@ class CreateCharacterActivity : AppCompatActivity() {
 
     private fun initVariables(){
         binding = ActivityCreateCharacterBinding.inflate(layoutInflater)
-        rpCharacterService = RPCharacterService(this, this)
+        rpCharacterService = RPCharacterService(this)
     }
 
     private fun initListeners(){
